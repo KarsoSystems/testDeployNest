@@ -1,0 +1,19 @@
+service: users-api
+
+frameworkVersion: '4'
+
+plugins:
+  - serverless-jetpack
+
+provider:
+  name: aws
+  runtime: nodejs20.x # or your current node version
+  region:  us-west-2 # or your region
+
+functions:
+  api:
+    handler: dist/lambda_api.handler
+    events:
+      - http:
+          method: any
+          path: /{proxy+}
