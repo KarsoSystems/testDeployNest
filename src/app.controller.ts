@@ -31,7 +31,7 @@ export class AppController {
 
   @Get('status')
   getStatus() {
-    return `ESTOY FUNCIONANDO EN MODO ${process.env.API_MODE} asimon`;
+    return `ESTOY FUNCIONANDO EN MODO ${process.env.API_MODE} simon`;
   }
 
   @Post('status')
